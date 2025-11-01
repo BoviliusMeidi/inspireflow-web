@@ -13,13 +13,17 @@
 import { getRandomQuote } from "@/lib/getQuote";
 import QuoteBox from "@/components/QuoteBox";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default async function RandomQuotePage() {
   const randomQuote = await getRandomQuote();
   return (
-    <div className="flex flex-col w-full justify-center items-center">
-      <Header/>
-      <QuoteBox initialQuote={randomQuote} showButton/>
+    <div className="flex flex-col w-full h-screen relative">
+      <Header />
+      <div className="absolute top-1/2 -translate-y-1/2">
+        <QuoteBox initialQuote={randomQuote} showButton />
+      </div>
+      <Footer />
     </div>
   );
 }

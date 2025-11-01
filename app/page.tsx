@@ -12,14 +12,18 @@ import TodayDate from "@/components/TodayDate";
 import { getDailyQuote } from "@/lib/getQuote";
 import QuoteBox from "@/components/QuoteBox";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
   const dailyQuote = await getDailyQuote();
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full h-screen relative">
       <Header />
-      <TodayDate />
-      <QuoteBox initialQuote={dailyQuote} />
+      <div className="absolute top-1/2 -translate-y-1/2">
+        <TodayDate />
+        <QuoteBox initialQuote={dailyQuote} />
+      </div>
+      <Footer />
     </div>
   );
 }
