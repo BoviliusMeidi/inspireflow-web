@@ -9,6 +9,8 @@ Built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
 
 🔗 **Live Demo** → [inspireflow-web.vercel.app](https://inspireflow-web.vercel.app/)
 
+✨ Quotes powered by [ZenQuotes.io](https://zenquotes.io/)
+
 ---
 ## 📸 Preview
 | Desktop View | Mobile View |
